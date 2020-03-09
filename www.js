@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const port = 80;
+const port = 8080;
 const baseUrl = path.resolve(__dirname, 'public');
 
 const handler = (req, res) => {

@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "app": "www.js"
+  },
+  "scripts": {
+    "start": "node ./www.js"
+  },
+  "author": "HSIKE",
+  "license": "ISC"
+}

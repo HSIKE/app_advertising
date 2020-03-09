@@ -1,0 +1,10 @@
+# idea directory
+.idea
+.vscode
+
+# copies and temp files
+*.copy.*
+*.temp.*
+
+# build
+build

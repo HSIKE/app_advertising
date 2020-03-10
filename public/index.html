@@ -12,208 +12,26 @@
       color: red;
     }
   </style>
-  <script src="js/i18n.js"></script>
-  <script src="lib/zepto.min.js"></script>
+<!--  <script src="lib/zepto.min.js"></script>-->
   <script type="text/javascript">
     (function(language) {
       var langMap = {
-        'zh-CN': {
-          title: '神秘',
-          content: '狗屎',
-          footer: '丢人',
-        },
-        'en': {
-          title: 'Hello',
-          content: 'World',
-          footer: 'fuck',
-        }
+        'zh-CN': ['神秘', '丢人', '狗屎'],
+        'en': ['Hello', 'World', 'My Ass']
       };
-      console.log(langMap[language]);
       window.lang = langMap[language] || langMap['en'];
     })(navigator.language);
   </script>
 </head>
 <body>
-  <div id="title" data-i18n="title"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="content"></div>
-  <div data-i18n="footer"></div>
-  <script src="index.js"></script>
+  <div id="title" data-i18n></div>
+  <div data-i18n></div>
+  <div data-i18n></div>
+  <script type="text/javascript">
+    var i18nList = document.querySelectorAll('[data-i18n]');
+    for (var i = 0, len = i18nList.length; i < len; i ++) {
+      i18nList[i].innerText = window.lang[i];
+    }
+  </script>
 </body>
 </html>

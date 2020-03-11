@@ -4,34 +4,194 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
   <title>Title</title>
-  <style>
-    html,body {
-      padding: 0;
-      margin: 0;
-      text-align: center;
-      color: red;
-    }
-  </style>
-<!--  <script src="lib/zepto.min.js"></script>-->
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/i18n.js"></script>
   <script type="text/javascript">
-    (function(language) {
-      var langMap = {
-        'zh-CN': ['神秘', '丢人', '狗屎'],
-        'en': ['Hello', 'World', 'My Ass']
-      };
-      window.lang = langMap[language] || langMap['en'];
-    })(navigator.language);
+    (function() {
+      /* Set font-size if window's size changes */
+      function resetRem() {
+        var html = document.documentElement;
+        var width = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
+        html.style.fontSize = width / 10 + "px";
+        window.rem = width / 10;
+      }
+      window.addEventListener("DOMContentLoaded", resetRem);
+      window.addEventListener("load", resetRem);
+      window.addEventListener("resize", resetRem);
+    })();
   </script>
 </head>
 <body>
-  <div id="title" data-i18n></div>
-  <div data-i18n></div>
-  <div data-i18n></div>
-  <script type="text/javascript">
-    var i18nList = document.querySelectorAll('[data-i18n]');
-    for (var i = 0, len = i18nList.length; i < len; i ++) {
-      i18nList[i].innerText = window.lang[i];
-    }
+  <div class="page home">
+    <div class="logo">
+      <img class="img" src="img/logo.png" alt="">
+    </div>
+    <div class="slogan">
+      <p class="lazy btt" data-i18n="0"></p>
+      <p class="lazy easeIn" data-i18n="1"></p>
+    </div>
+    <div class="btns">
+      <div class="btn animate store">
+        <div class="inner">
+          <img class="img platform" src="" data-src-ios="./img/apple.png" data-src-android="./img/google.png" alt="">
+          <span data-i18n="2"></span>
+          <span data-i18n="3"></span>
+        </div>
+      </div>
+      <div class="btn animate local" data-i18n="4"></div>
+    </div>
+    <div class="guide">
+      <img class="img" src="img/arrow.png" alt="">
+    </div>
+  </div>
+  <div class="page summary">
+    <div class="mobiles">
+      <div
+        class="mobile"
+        data-top="0.483"
+        data-top-origin="-8.285"
+        data-left="3.176"
+        data-left-origin="3.176"
+      >
+        <img class="img" src="img/phone2.png" alt="">
+      </div>
+      <div
+        class="mobile"
+        data-top="1.908"
+        data-top-origin="1.908"
+        data-left="-1.498"
+        data-left-origin="-4.142"
+      >
+        <img class="img" src="img/phone2.png" alt="">
+      </div>
+      <div
+        class="mobile"
+        data-top="10.954"
+        data-top-origin="10.954"
+        data-left="-1.498"
+        data-left-origin="-6.159"
+      >
+        <img class="img" src="img/phone2.png" alt="">
+      </div>
+      <div
+        class="mobile"
+        data-top="1.908"
+        data-top-origin="1.908"
+        data-left="7.814"
+        data-left-origin="10.483"
+      >
+        <img class="img" src="img/phone2.png" alt="">
+      </div>
+      <div
+        class="mobile"
+        data-top="10.954"
+        data-top-origin="10.954"
+        data-left="7.814"
+        data-left-origin="12.5"
+      >
+        <img class="img" src="img/phone2.png" alt="">
+      </div>
+      <div
+        class="mobile"
+        data-top="19.517"
+        data-top-origin="19.517"
+        data-left="7.814"
+        data-left-origin="12.5"
+      >
+        <img class="img" src="img/phone2.png" alt="">
+      </div>
+      <div
+        class="mobile"
+        data-top="14.07"
+        data-top-origin="23.389"
+        data-left="3.176"
+        data-left-origin="3.176"
+      >
+        <img class="img" src="img/phone2.png" alt="">
+      </div>
+    </div>
+    <div class="text">
+      <div class="title" data-i18n="5"></div>
+    </div>
+  </div>
+  <div class="page advantage">
+    <div class="text">
+      <div class="title" data-i18n="6"></div>
+      <div class="gutter"></div>
+      <div class="description" data-i18n="7"></div>
+    </div>
+    <div class="example">
+      <img class="img lazy" data-src="./img/phone1.png" alt="">
+    </div>
+  </div>
+  <div class="page advantage">
+    <div class="text">
+      <div class="title" data-i18n="8"></div>
+      <div class="gutter"></div>
+      <div class="description" data-i18n="9"></div>
+    </div>
+    <div class="example">
+      <img class="img lazy" data-src="./img/phone1.png" alt="">
+    </div>
+  </div>
+  <div class="page advantage">
+    <div class="text">
+      <div class="title" data-i18n="10"></div>
+      <div class="gutter"></div>
+      <div class="description" data-i18n="11"></div>
+    </div>
+    <div class="example">
+      <img class="img lazy" data-src="./img/phone1.png" alt="">
+    </div>
+  </div>
+  <div class="page advantage">
+    <div class="text">
+      <div class="title" data-i18n="12"></div>
+      <div class="gutter"></div>
+      <div class="description" data-i18n="13"></div>
+    </div>
+    <div class="example">
+      <img class="img lazy" data-src="./img/phone1.png" alt="">
+    </div>
+  </div>
+  <div class="page advantage">
+    <div class="text">
+      <div class="title" data-i18n="14"></div>
+      <div class="gutter"></div>
+      <div class="description" data-i18n="15"></div>
+    </div>
+    <div class="example">
+      <img class="img lazy" data-src="./img/phone1.png" alt="">
+    </div>
+  </div>
+  <div class="page more"></div>
+  <div class="page download">
+    <div class="btns">
+      <div class="btn animate store">
+        <div class="inner">
+          <img class="img platform" src="" data-src-ios="./img/apple.png" data-src-android="./img/google.png" alt="">
+          <span data-i18n="2"></span>
+          <span data-i18n="3"></span>
+        </div>
+      </div>
+      <div class="btn animate local" data-i18n="4"></div>
+    </div>
+  </div>
+  <script>
+    (function() {
+      var i18ns = document.querySelectorAll('[data-i18n]');
+      for (var i = 0, len = i18ns.length; i < len; i ++) {
+        var el = i18ns[i];
+        el.innerText = window.i18n[el.dataset.i18n];
+      }
+      var platforms = document.querySelectorAll('.img.platform');
+      for (var j = 0; j < platforms.length; j ++) {
+        var ele = platforms[j];
+        ele.src = window.isIOS ? ele.dataset.srcIos : ele.dataset.srcAndroid;
+      }
+    })();
   </script>
+  <script type="text/javascript" src="js/lazyload.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

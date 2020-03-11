@@ -1,0 +1,221 @@
+@keyframes btt {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes easeIn {
+  0%, 70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes btn-animation {
+  0%, 70% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+html, body, p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10vw;
+}
+
+body {
+  background: #101014;
+  position: relative;
+}
+
+.page {
+  width: 10rem;
+  /*height: 100vh;*/
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.page.home {
+  height: 100vh;
+  position: relative;
+  overflow: visible;
+  background:linear-gradient(180deg,rgba(34,34,36,1) 0%,rgba(16,16,20,1) 100%);
+}
+
+.home .logo {
+  width: 4.952rem;
+  height: 1.872rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  transform-origin: center 0;
+}
+.logo img {
+  animation: btt 0.8s 1;
+}
+.home .slogan {
+  text-align: center;
+  color: #FFF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+  transform-origin: center 0;
+}
+.slogan p {
+  font-size: 0.773rem;
+  line-height: 1;
+}
+.slogan p:not(:last-of-type) {
+  margin-bottom: 0.725rem;
+}
+.slogan .btt {
+  animation: btt 1.5s 1;
+}
+.slogan .easeIn {
+  animation: easeIn 1.5s 1;
+}
+
+.guide {
+  position: fixed;
+  width: 0.58rem;
+  height: 0.29rem;
+  bottom: 0.725rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  animation: btt 2s 1;
+}
+
+.btns {
+  left: 0.483rem;
+  right: 0.483rem;
+  overflow: hidden;
+  bottom: 2.367rem;
+}
+.btns .btn {
+  width: 4.831rem;
+  height: 1.087rem;
+  line-height: 1.087rem;
+  background: #FFF;
+  border-radius: 0.145rem;
+  float: left;
+  font-size: 0.386rem;
+  text-align: center;
+}
+.btns .btn.animate {
+  animation: btn-animation 2s 1;
+}
+.btn.local {
+  background: #FFB11A;
+  float: right;
+  width: 3.72rem;
+  color: #101014;
+}
+.btn .inner {
+  display: inline-block;
+  line-height: 1;
+  position: relative;
+  padding-left: 0.845rem;
+}
+.img.platform {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.604rem;
+  height: 0.713rem;
+}
+
+.home .btns {
+  position: absolute;
+}
+
+.page.summary {
+  position: relative;
+  overflow: hidden;
+  height: 28.043rem;
+}
+
+.mobiles {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mobiles .mobile {
+  width: 3.659rem;
+  height: 7.319rem;
+  /*background: aquamarine;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+}
+
+.download .btns {
+  position: absolute;
+}
+
+.text {
+  margin: 0 0.725rem;
+}
+.title {
+  font-size: 0.821rem;
+  font-weight: 600;
+  color: rgba(255,255,255,1);
+  line-height: 1.208rem;
+}
+.gutter {
+  height: 0.242rem;
+}
+.description {
+  font-size: 0.386rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.4);
+  line-height: 0.58rem;
+}
+
+.summary .text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.page.advantage {
+  padding-top: 1.932rem;
+  padding-bottom: 1.739rem;
+}
+.advantage .example {
+  position: relative;
+  margin: 1.932rem auto 0;
+  width: 7.089rem;
+  height: 14.155rem;
+}
+
+.page.download {
+  height: 100vh;
+  position: relative;
+}

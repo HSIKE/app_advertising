@@ -1,8 +1,8 @@
 (function() {
-  const vh = window.innerHeight;
 
   function scrollHandler() {
     const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    const vh = window.innerHeight;
 
     const logo = document.querySelector('.home .logo');
     const slogan = document.querySelector('.home .slogan');

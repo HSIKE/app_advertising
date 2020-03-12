@@ -1,33 +1,53 @@
+@font-face {
+  font-family: Dinpro-Bold;
+  src: url("../img/fonts/DINPro-Bold.otf") format('opentype');
+}
+@font-face {
+  font-family: Dinpro-Medium;
+  src: url("../img/fonts/DINPro-Medium.otf") format('opentype');
+}
 @keyframes btt {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(0);
+    transform: translateY(0.725rem);
   }
-  20% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 @keyframes easeIn {
-  0%, 70% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @keyframes btn-animation {
-  0%, 70% {
+  0%, 50% {
     opacity: 0;
     transform: scale(0.3);
   }
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@keyframes guide {
+  from {
+    bottom: -0.29rem;
+  }
+  to {
+    bottom: 0.725rem;
+  }
+}
+@keyframes bounce {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(0.362rem);
   }
 }
 html, body, p {
@@ -46,7 +66,6 @@ body {
 
 .page {
   width: 10rem;
-  /*height: 100vh;*/
 }
 
 .img {
@@ -55,8 +74,14 @@ body {
   display: block;
 }
 
+.bold {
+  font-family: Dinpro-Bold, PingFangSC-Regular, PingFangTC-Regular, Roboto, sans-serif;
+}
+.medium {
+  font-family: Dinpro-Medium, PingFangSC-Regular, PingFangTC-Regular, Roboto, sans-serif;
+}
 .page.home {
-  height: 100vh;
+  height: 8.684rem;
   position: relative;
   overflow: visible;
   background:linear-gradient(180deg,rgba(34,34,36,1) 0%,rgba(16,16,20,1) 100%);
@@ -73,12 +98,14 @@ body {
   transform-origin: center 0;
 }
 .logo img {
-  animation: btt 0.8s 1;
+  animation: btt 1s 1;
+  animation-fill-mode: forwards;
 }
 .home .slogan {
   text-align: center;
   color: #FFF;
   position: absolute;
+  font-weight:600;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -86,6 +113,7 @@ body {
   transform-origin: center 0;
 }
 .slogan p {
+  opacity: 0;
   font-size: 0.773rem;
   line-height: 1;
 }
@@ -93,21 +121,27 @@ body {
   margin-bottom: 0.725rem;
 }
 .slogan .btt {
-  animation: btt 1.5s 1;
+  animation: btt 1s 1 0.5s;
+  animation-fill-mode: forwards;
 }
 .slogan .easeIn {
-  animation: easeIn 1.5s 1;
+  animation: easeIn 1s 1 1s;
+  animation-fill-mode: forwards;
 }
 
 .guide {
   position: fixed;
   width: 0.58rem;
   height: 0.29rem;
-  bottom: 0.725rem;
+  bottom: -0.29rem;
   margin: 0 auto;
   left: 0;
   right: 0;
-  animation: btt 2s 1;
+  animation: guide 1s 1 2s;
+  animation-fill-mode: forwards;
+}
+.guide .img {
+  animation: bounce 2s 2s infinite;
 }
 
 .btns {
@@ -125,9 +159,11 @@ body {
   float: left;
   font-size: 0.386rem;
   text-align: center;
+  opacity: 0;
 }
 .btns .btn.animate {
-  animation: btn-animation 2s 1;
+  animation: btn-animation 1.5s 1 0.5s;
+  animation-fill-mode: forwards;
 }
 .btn.local {
   background: #FFB11A;
@@ -172,6 +208,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
   transform-origin: 0 0;
 }
 
@@ -202,6 +239,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  /*margin-right: 2.174rem;*/
 }
 
 .page.advantage {

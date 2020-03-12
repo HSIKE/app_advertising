@@ -1,9 +1,8 @@
 (function() {
-
   function scrollHandler() {
     const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    const vh = window.innerHeight;
 
+    const home = document.querySelector('.page.home');
     const logo = document.querySelector('.home .logo');
     const slogan = document.querySelector('.home .slogan');
     const btns = document.querySelector('.home .btns');
@@ -11,7 +10,8 @@
     const mobiles = document.querySelector('.summary .mobiles');
     const mobileList = document.querySelectorAll('.summary .mobile');
 
-    const zoomFactor = Math.min(Math.max(scrolled / vh, 0), 1);
+    const homeHeight = home.offsetHeight;
+    const zoomFactor = Math.min(Math.max(scrolled / homeHeight, 0), 1);
 
     const logoTranslateY = (1 + 1.44 * zoomFactor) * 3.96;
     const sloganTranslateY = (1 + 0.12 * zoomFactor) * 9.81;
@@ -38,7 +38,8 @@
       `;
       guide.style.cssText = `
         visibility: visible;
-        opacity:${1 - 7 * zoomFactor};
+        opacity:${1 - 5 * zoomFactor};
+        bottom:
       `;
 
       mobiles.style.position = 'fixed';
@@ -53,14 +54,15 @@
     } else if (zoomFactor >= 1) {
       logo.style.cssText = `
         position:absolute;
-        transform:translateY(${logoTranslateY + vh / rem}rem) scale(0.4);
+        transform:translateY(${logoTranslateY + homeHeight / window.rem}rem) scale(0.4);
       `;
       slogan.style.cssText = `
         position:absolute;
-        transform:translateY(${sloganTranslateY + vh / rem}rem) scale(0.55);
+        transform:translateY(${sloganTranslateY + homeHeight / window.rem}rem) scale(0.55);
       `;
       btns.style.cssText = 'opacity:1;position:absolute;';
-      guide.style.cssText = 'visibility: visible;opacity:0;';
+      guide.style.cssText = 'visibility:hidden;';
+
       mobiles.style.position = 'absolute';
       mobileList.forEach((m) => {
         const translateY = m.dataset.top;

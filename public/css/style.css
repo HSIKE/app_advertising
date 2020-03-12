@@ -73,6 +73,9 @@ body {
   height: 100%;
   display: block;
 }
+.img.lazyload {
+  opacity: 0;
+}
 
 .bold {
   font-family: Dinpro-Bold, PingFangSC-Regular, PingFangTC-Regular, Roboto, sans-serif;
@@ -256,4 +259,12 @@ body {
 .page.download {
   height: 100vh;
   position: relative;
+}
+
+.lazy {
+  opacity: 0;
+}
+.lazy.show {
+  animation: btt 0.8s 1;
+  animation-fill-mode: forwards;
 }

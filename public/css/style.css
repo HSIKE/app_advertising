@@ -50,6 +50,26 @@
     transform: translateY(0.362rem);
   }
 }
+@keyframes create-notification {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100%;
+  }
+}
+@keyframes notification-toast {
+  0% {
+    visibility: visible;
+    top: -100%;
+    transform: scale(0.3);
+  }
+  to {
+    visibility: visible;
+    top: 0;
+    transform: scale(1);
+  }
+}
 html, body, p {
   margin: 0;
   padding: 0;
@@ -152,6 +172,7 @@ body {
   right: 0.483rem;
   overflow: hidden;
   bottom: 2.367rem;
+  position: absolute;
 }
 .btns .btn {
   width: 4.831rem;
@@ -164,7 +185,7 @@ body {
   text-align: center;
   opacity: 0;
 }
-.btns .btn.animate {
+.btn.animate {
   animation: btn-animation 1.5s 1 0.5s;
   animation-fill-mode: forwards;
 }
@@ -189,14 +210,11 @@ body {
   height: 0.713rem;
 }
 
-.home .btns {
-  position: absolute;
-}
-
 .page.summary {
   position: relative;
   overflow: hidden;
   height: 28.043rem;
+  padding-bottom: 1.329rem;
 }
 
 .mobiles {
@@ -213,10 +231,6 @@ body {
   left: 0;
   opacity: 0;
   transform-origin: 0 0;
-}
-
-.download .btns {
-  position: absolute;
 }
 
 .text {
@@ -241,21 +255,20 @@ body {
 .summary .text {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 1.329rem;
   /*margin-right: 2.174rem;*/
 }
-
+.page.advantages {
+  padding-top: 1.932rem;
+}
+.advantages .title {
+  color: #FFB11A;
+  line-height: 1;
+}
 .page.advantage {
   padding-top: 1.932rem;
-  padding-bottom: 1.739rem;
+  padding-bottom: 1.691rem;
 }
-.advantage .example {
-  position: relative;
-  margin: 1.932rem auto 0;
-  width: 7.089rem;
-  height: 14.155rem;
-}
-
 .page.download {
   height: 100vh;
   position: relative;
@@ -267,4 +280,57 @@ body {
 .lazy.show {
   animation: btt 0.8s 1;
   animation-fill-mode: forwards;
+}
+.page.more {
+  padding-top: 1.932rem;
+}
+.example {
+  position: relative;
+  overflow: hidden;
+  margin: 1.932rem auto 0;
+  width: 7.089rem;
+  height: 14.155rem;
+}
+.create {
+  position: absolute;
+  left: 0.725rem;
+  right: 0.725rem;
+  top: 1.449rem;
+  bottom: 0.483rem;
+  overflow: hidden;
+}
+.create .img {
+  position: relative;
+}
+.create .img.animate {
+  animation: create-notification 0.5s 1;
+  animation-fill-mode: forwards;
+}
+.notification-toast {
+  position: absolute;
+  top: 1.449rem;
+  left: 0.966rem;
+  right: 0.966rem;
+  overflow: hidden;
+}
+.notification-toast .img {
+  visibility: hidden;
+  height: auto;
+  transform-origin: center center;
+  position: relative;
+}
+.notification-toast .img.animate {
+  animation: notification-toast 0.3s 1 1s;
+  animation-fill-mode: forwards;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.sliders {
+  margin-top: 1.932rem;
 }

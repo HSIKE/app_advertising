@@ -1,7 +1,6 @@
 (function() {
   function handler() {
     const vh = window.innerHeight;
-    const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
     const lazyImg = document.querySelectorAll('.img.lazyload');
     lazyImg.forEach((ele) => {
@@ -18,7 +17,14 @@
       if (dtt <= vh - 40) {
         ele.classList.add('show')
       }
-    })
+    });
+
+    const createNotification = document.querySelector('.create');
+    const { height, top } = createNotification.getBoundingClientRect();
+    if (top * 2 + height <= vh) {
+      document.querySelector('.create .img').classList.add('animate');
+      document.querySelector('.notification-toast .img').classList.add('animate');
+    }
   }
   window.addEventListener('DOMContentLoaded', handler);
   window.addEventListener('scroll', handler);

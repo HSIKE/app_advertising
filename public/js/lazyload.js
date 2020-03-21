@@ -19,25 +19,25 @@
       }
     });
 
-    const createSize = document.querySelector('.create').getBoundingClientRect();
-    if (createSize.top * 2 + createSize.height <= vh) {
+    const createSize = document.querySelector('.example.notification').getBoundingClientRect();
+    if (createSize.top <= 0.3* vh) {
       document.querySelector('.create .img').classList.add('animate');
       document.querySelector('.notification-toast .img').classList.add('animate');
     }
     const lossSize = document.querySelector('.loss-mask').getBoundingClientRect();
-    if (lossSize.top * 2 + lossSize.height <= vh) {
+    if (lossSize.top <= 0.3 * vh) {
       document.querySelector('.loss-mask').style.visibility = 'visible';
       document.querySelector('.loss1 .img').classList.add('animate');
       document.querySelector('.loss2 .img').classList.add('animate');
     }
     const shareSize = document.querySelector('.share-mask').getBoundingClientRect();
-    if (shareSize.top * 2 + shareSize.height <= vh) {
+    if (shareSize.top <= 0.3 * vh) {
       document.querySelector('.share-mask').style.visibility = 'visible';
       document.querySelector('.share-card').style.visibility = 'visible';
       document.querySelector('.share-apps .img').classList.add('animate');
     }
     const priceSize = document.querySelector('img.price').getBoundingClientRect();
-    if (priceSize.top * 2 + priceSize.height <= vh) {
+    if (priceSize.top <= 0.3 * vh) {
       document.querySelector('.price-toast .img').classList.add('animate')
     }
   }

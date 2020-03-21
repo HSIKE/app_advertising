@@ -1,32 +1,33 @@
 (function() {
-  (function() {
-    var i18ns = document.querySelectorAll('[data-i18n]');
-    for (var i = 0, len = i18ns.length; i < len; i ++) {
-      var el = i18ns[i];
-      el.innerText = window.i18n[el.dataset.i18n];
+  const i18ns = document.querySelectorAll('[data-i18n]');
+  i18ns.forEach((el) => {
+    el.innerText = window.i18n[el.dataset.i18n];
+  });
+  const platforms = document.querySelectorAll('.img.platform');
+  platforms.forEach((el) => {
+    el.src = window.isIOS ? el.dataset.srcIos : el.dataset.srcAndroid;
+  });
+  const btn = document.querySelectorAll('.btn');
+  btn.forEach((el) => {
+    el.classList.add('animate');
+  });
+
+  setInterval(() => {
+    const slideLeft = document.querySelector('.slide-left');
+    const slideRight = document.querySelector('.slide-right');
+    const leftSize = slideLeft.getBoundingClientRect();
+    const rightSize = slideRight.getBoundingClientRect();
+    if (leftSize.left > -16 * window.rem) {
+      slideLeft.style.left = `${leftSize.left - 1}px`;
+    } else {
+      slideLeft.style.left = '0';
     }
-    var platforms = document.querySelectorAll('.img.platform');
-    for (var j = 0; j < platforms.length; j ++) {
-      var ele = platforms[j];
-      ele.src = window.isIOS ? ele.dataset.srcIos : ele.dataset.srcAndroid;
+    if (rightSize.left < -5.215 * window.rem) {
+      slideRight.style.left = `${rightSize.left + 1}px`
+    } else {
+      slideRight.style.left = `-${21.22 * window.rem}px`;
     }
-    setInterval(() => {
-      var slideLeft = document.querySelector('.slide-left');
-      var slideRight = document.querySelector('.slide-right');
-      var leftSize = slideLeft.getBoundingClientRect();
-      var rightSize = slideRight.getBoundingClientRect();
-      if (leftSize.left > -16 * window.rem) {
-        slideLeft.style.left = `${leftSize.left - 2}px`;
-      } else {
-        slideLeft.style.left = '0';
-      }
-      if (rightSize.left < -5.215 * window.rem) {
-        slideRight.style.left = `${rightSize.left + 2}px`
-      } else {
-        slideRight.style.left = `-${21.22 * window.rem}px`;
-      }
-    }, 50)
-  })();
+  }, 25);
 
   function scrollHandler() {
     const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;

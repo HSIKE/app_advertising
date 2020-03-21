@@ -255,6 +255,7 @@ body {
 
 .text {
   margin: 0 0.725rem;
+  white-space: pre-wrap;
 }
 .title {
   font-size: 0.821rem;

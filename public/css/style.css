@@ -255,13 +255,13 @@ body {
 
 .text {
   margin: 0 0.725rem;
-  white-space: pre-wrap;
 }
 .title {
   font-size: 0.821rem;
   font-weight: 600;
   color: rgba(255,255,255,1);
   line-height: 1.208rem;
+  white-space: pre-wrap;
 }
 .gutter {
   height: 0.242rem;
@@ -271,6 +271,7 @@ body {
   font-weight: 400;
   color: rgba(255,255,255,0.4);
   line-height: 0.58rem;
+  white-space: pre-wrap;
 }
 
 .summary .text {

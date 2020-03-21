@@ -1,4 +1,33 @@
 (function() {
+  (function() {
+    var i18ns = document.querySelectorAll('[data-i18n]');
+    for (var i = 0, len = i18ns.length; i < len; i ++) {
+      var el = i18ns[i];
+      el.innerText = window.i18n[el.dataset.i18n];
+    }
+    var platforms = document.querySelectorAll('.img.platform');
+    for (var j = 0; j < platforms.length; j ++) {
+      var ele = platforms[j];
+      ele.src = window.isIOS ? ele.dataset.srcIos : ele.dataset.srcAndroid;
+    }
+    setInterval(() => {
+      var slideLeft = document.querySelector('.slide-left');
+      var slideRight = document.querySelector('.slide-right');
+      var leftSize = slideLeft.getBoundingClientRect();
+      var rightSize = slideRight.getBoundingClientRect();
+      if (leftSize.left > -16 * window.rem) {
+        slideLeft.style.left = `${leftSize.left - 2}px`;
+      } else {
+        slideLeft.style.left = '0';
+      }
+      if (rightSize.left < -5.215 * window.rem) {
+        slideRight.style.left = `${rightSize.left + 2}px`
+      } else {
+        slideRight.style.left = `-${21.22 * window.rem}px`;
+      }
+    }, 50)
+  })();
+
   function scrollHandler() {
     const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 

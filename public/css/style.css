@@ -70,6 +70,26 @@
     transform: scale(1);
   }
 }
+@keyframes slide {
+  from {
+    visibility: visible;
+    top: 100%;
+  }
+  to {
+    visibility: visible;
+    top: 0;
+  }
+}
+@keyframes zoom {
+  from {
+    visibility: visible;
+    transform: scale(1);
+  }
+  to {
+    visibility: visible;
+    transform: scale(1.5);
+  }
+}
 html, body, p {
   margin: 0;
   padding: 0;
@@ -167,7 +187,7 @@ body {
   animation: bounce 2s 2s infinite;
 }
 
-.btns {
+.home .btns {
   left: 0.483rem;
   right: 0.483rem;
   overflow: hidden;
@@ -269,10 +289,6 @@ body {
   padding-top: 1.932rem;
   padding-bottom: 1.691rem;
 }
-.page.download {
-  height: 100vh;
-  position: relative;
-}
 
 .lazy {
   opacity: 0;
@@ -283,6 +299,7 @@ body {
 }
 .page.more {
   padding-top: 1.932rem;
+  padding-bottom: 1.932rem;
 }
 .example {
   position: relative;
@@ -295,7 +312,7 @@ body {
   position: absolute;
   left: 0.725rem;
   right: 0.725rem;
-  top: 1.449rem;
+  top: 2.174rem;
   bottom: 0.483rem;
   overflow: hidden;
 }
@@ -331,6 +348,137 @@ body {
   left: 0;
   visibility: hidden;
 }
-.sliders {
+.loss1, .loss2 {
+  position: absolute;
+  left: 0.785rem;
+  right: 0.785rem;
+  bottom: 0.543rem;
+  overflow: hidden;
+}
+.loss1 {
+  top: 5.99rem;
+}
+.loss2 {
+  top: 4.058rem;
+}
+.loss1 .img, .loss2 .img {
+  visibility: hidden;
+  position: relative;
+}
+.loss1 .img.animate, .loss2 .img.animate {
+  animation: slide 0.5s 1;
+  animation-fill-mode: forwards;
+}
+.loss2 .img.animate {
+  animation-delay: 1s;
+}
+.share-card {
+  position: absolute;
+  top: 1.896rem;
+  bottom: 3.804rem;
+  left: 0.966rem;
+  right: 0.966rem;
+  visibility: hidden;
+}
+.share-card .img {
+  height: auto;
+}
+.share-apps {
+  position: absolute;
+  left: 0.845rem;
+  right: 0.845rem;
+  height: 2.246rem;
+  bottom: 0.543rem;
+  overflow: hidden;
+}
+.share-apps .img {
+  visibility: hidden;
+  position: relative;
+}
+.share-apps .img.animate {
+  animation: slide 1s 1;
+  animation-fill-mode: forwards;
+}
+.example.price {
+  overflow: visible;
+}
+.price-toast {
+  position: absolute;
+  left: 0.604rem;
+  right: 2.959rem;
+  top: 2.295rem;
+}
+.price-toast .img {
+  visibility: hidden;
+}
+.price-toast .img.animate {
+  transform-origin: right bottom;
+  animation: zoom 0.5s 1;
+  animation-fill-mode: forwards;
+}
+.sliders-top, .sliders-bottom {
+  width: 100%;
+  overflow: hidden;
+}
+.sliders-top {
   margin-top: 1.932rem;
+}
+.sliders-bottom {
+  margin-top: 1.449rem;
+}
+.slide-left, .slide-right {
+  width: 31.22rem;
+  position: relative;
+  overflow: hidden;
+}
+.slide-left {
+  left: 0;
+}
+.slide-right {
+  left: -21.22rem;
+}
+.slider {
+  float: left;
+  width: 2.415rem;
+  min-height: 100%;
+  margin-right: 0.785rem;
+}
+.slider:last-child {
+  margin-right: 0;
+}
+.slider .img {
+  width: 1.884rem;
+  height: 1.884rem;
+}
+.slider-text {
+  font-size: 0.338rem;
+  font-weight: 600;
+  color: #FFF;
+  margin-top: 0.362rem;
+  line-height: 0.483rem;
+}
+.page.download {
+  padding-top: 1.932rem;
+  padding-bottom: 1.534rem;
+}
+.download .btns {
+  margin: 2.657rem 0.483rem 0;
+  overflow: hidden;
+}
+.download .title {
+  color: #FFB11A;
+}
+.bybit{
+  width: 4.251rem;
+  height: 8.49rem;
+  margin-top: 3.14rem;
+  margin-left: 1.353rem;
+  position: relative;
+}
+.bybit .img.rotate {
+  width: auto;
+  position: absolute;
+  top: 0;
+  bottom: 100%;
+  left: 100%;
 }

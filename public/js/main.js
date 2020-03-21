@@ -8,6 +8,16 @@
     el.src = window.isIOS ? el.dataset.srcIos : el.dataset.srcAndroid;
   });
 
+  window.addEventListener('load', function() {
+    document.querySelector('.logo img').classList.add('animate');
+    document.querySelectorAll('.slogan p').forEach((el) => {
+      el.classList.add('animate');
+    });
+    document.querySelectorAll('.btn').forEach((el) => {
+      el.classList.add('animate');
+    });
+  });
+
   setInterval(() => {
     const slideLeft = document.querySelector('.slide-left');
     const slideRight = document.querySelector('.slide-right');

@@ -7,10 +7,6 @@
   platforms.forEach((el) => {
     el.src = window.isIOS ? el.dataset.srcIos : el.dataset.srcAndroid;
   });
-  const btn = document.querySelectorAll('.btn');
-  btn.forEach((el) => {
-    el.classList.add('animate');
-  });
 
   setInterval(() => {
     const slideLeft = document.querySelector('.slide-left');
@@ -25,9 +21,14 @@
     if (rightSize.left < -5.215 * window.rem) {
       slideRight.style.left = `${rightSize.left + 1}px`
     } else {
-      slideRight.style.left = `-${21.22 * window.rem}px`;
+      slideRight.style.left = '-21.22rem';
     }
   }, 25);
+
+  const btn = document.querySelectorAll('.btn');
+  btn.forEach((el) => {
+    el.classList.add('animate');
+  });
 
   function scrollHandler() {
     const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;

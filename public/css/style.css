@@ -140,7 +140,7 @@ body {
   z-index: 2;
   transform-origin: center 0;
 }
-.logo img {
+.logo img.animate {
   animation: btt 1s 1;
   animation-fill-mode: forwards;
 }
@@ -163,11 +163,11 @@ body {
 .slogan p:not(:last-of-type) {
   margin-bottom: 0.725rem;
 }
-.slogan .btt {
+.slogan .btt.animate {
   animation: btt 1s 1 0.5s;
   animation-fill-mode: forwards;
 }
-.slogan .easeIn {
+.slogan .easeIn.animate {
   animation: easeIn 1s 1 1s;
   animation-fill-mode: forwards;
 }

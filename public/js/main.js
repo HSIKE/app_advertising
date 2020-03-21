@@ -1,7 +1,7 @@
 (function() {
   const i18ns = document.querySelectorAll('[data-i18n]');
   i18ns.forEach((el) => {
-    el.innerText = window.i18n[el.dataset.i18n];
+    el.innerHTML = window.i18n[el.dataset.i18n];
   });
   const platforms = document.querySelectorAll('.img.platform');
   platforms.forEach((el) => {
@@ -24,11 +24,6 @@
       slideRight.style.left = '-21.22rem';
     }
   }, 25);
-
-  const btn = document.querySelectorAll('.btn');
-  btn.forEach((el) => {
-    el.classList.add('animate');
-  });
 
   function scrollHandler() {
     const scrolled = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;

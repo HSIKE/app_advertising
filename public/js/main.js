@@ -7,6 +7,10 @@
   platforms.forEach((el) => {
     el.src = window.isIOS ? el.dataset.srcIos : el.dataset.srcAndroid;
   });
+  const stores = document.querySelectorAll('a.btn');
+  stores.forEach((el) => {
+    el.href = window.isIOS ? el.dataset.hrefIos : el.dataset.hrefAndroid;
+  });
 
   window.addEventListener('load', function() {
     document.querySelector('.logo img').classList.add('animate');

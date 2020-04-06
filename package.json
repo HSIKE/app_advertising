@@ -7,7 +7,7 @@
     "app": "www.js"
   },
   "scripts": {
-    "start": "node ./www.js"
+    "start": "node ./server.js"
   },
   "author": "HSIKE",
   "license": "ISC"

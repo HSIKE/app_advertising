@@ -90,9 +90,19 @@
     transform: scale(1.5);
   }
 }
-html, body, p {
+@keyframes rotate {
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+html, body, p, img, div, a {
   margin: 0;
   padding: 0;
+  background-repeat: no-repeat;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -101,7 +111,7 @@ html {
 
 body {
   background: #101014;
-  position: relative;
+  width: 100vw;
 }
 
 .page {
@@ -187,6 +197,9 @@ body {
   animation: bounce 2s 2s infinite;
 }
 
+.btns {
+  z-index: 9;
+}
 .home .btns {
   left: 0.483rem;
   right: 0.483rem;
@@ -195,6 +208,7 @@ body {
   position: absolute;
 }
 .btns .btn {
+  text-decoration: none;
   width: 4.831rem;
   height: 1.087rem;
   line-height: 1.087rem;
@@ -204,6 +218,7 @@ body {
   font-size: 0.386rem;
   text-align: center;
   opacity: 0;
+  color: #101014;
 }
 .btn.animate {
   animation: btn-animation 1.5s 1 0.5s;
@@ -213,7 +228,6 @@ body {
   background: #FFB11A;
   float: right;
   width: 3.72rem;
-  color: #101014;
 }
 .btn .inner {
   display: inline-block;
@@ -480,7 +494,15 @@ body {
 .bybit .img.rotate {
   width: auto;
   position: absolute;
+  z-index: -1;
   top: 0;
   bottom: 100%;
   left: 100%;
+  transform-origin: 0 100%;
+  visibility: hidden;
+}
+.bybit .img.rotate.animate {
+  animation: rotate 1s 1;
+  animation-fill-mode: forwards;
+  visibility: visible;
 }

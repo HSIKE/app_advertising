@@ -27,7 +27,8 @@
           '冷钱包体系',
           '零成本开仓',
           '人性化体验',
-          '高级交易功能'
+          '高级交易功能',
+          '下载Bybit App'
         ];
       case 'zh-hk':
       case 'zh-tw':
@@ -51,7 +52,8 @@
           '冷錢包體系',
           '零成本開倉',
           '人性化體驗',
-          '高級交易功能'
+          '高級交易功能',
+          '下載Bybit App'
         ];
       case 'ja-jp':
         return [
@@ -74,7 +76,8 @@
           'コールドウォレット',
           '参入コストなし',
           '使いやすさ',
-          '高性能な取引機能'
+          '高性能な取引機能',
+          'Bybitアプリをダウンロード'
         ];
       case 'ko-kr':
         return [
@@ -97,7 +100,8 @@
           '콜드월렛 시스템',
           '포지션 오픈 시제로 수수료',
           '24시간한국어 고객센터',
-          '고급 거래 기능'
+          '고급 거래 기능',
+          'Bybit App 다운로드'
         ];
       case 'ru-ru':
         return [
@@ -120,7 +124,8 @@
           'Холодный кошелёк',
           'Позиции без затрат',
           'Для людей',
-          'Продвинутые функции'
+          'Продвинутые функции',
+          'Скачать приложение'
         ];
       default:
         return [
@@ -143,7 +148,8 @@
           'Cold Wallet System',
           'Zero-cost Open Positions',
           'We Listen, Care, Improve',
-          'Advanced Trading Functions'
+          'Advanced Trading Functions',
+          'Download Bybit App'
         ];
     }
   }

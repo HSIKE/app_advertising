@@ -1,13 +1,13 @@
 const path = require('path');
 const fs = require('fs');
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const ExtractTextPlugin = require("mini-css-extract-plugin");
-const purifyCssWebpack = require("purifycss-webpack");
+// const purifyCssWebpack = require("purifycss-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const TerserPlugin = require('terser-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const TerserPlugin = require('terser-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 const root = path.join(__dirname, 'public');
@@ -63,11 +63,11 @@ module.exports = {
                     attribute: 'href',
                     type: 'src',
                   },
-                  {
-                    tag: 'script',
-                    attribute: 'src',
-                    type: 'src',
-                  }
+                  // {
+                  //   tag: 'script',
+                  //   attribute: 'src',
+                  //   type: 'src',
+                  // }
                 ]
               },
               minimize: true,
@@ -140,6 +140,7 @@ module.exports = {
       inject: true,
       hash: false,
       minify: false,
-    })
+      favicon: path.join(root, 'favicon.ico'),
+    }),
   ],
 }

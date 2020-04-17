@@ -12,5 +12,6 @@ node_modules
 # build
 build
 
-# package-lock.json
+# lock files
 package-lock.json
+yarn.lock

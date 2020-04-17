@@ -7,6 +7,7 @@
   function getLocaleText(lang) {
     switch (lang.toLowerCase()) {
       case 'zh-cn':
+        document.title = '为交易者而生，极致体验的交易App';
         return [
           '源于效率,不止交易',
           '为交易者而生',
@@ -32,6 +33,7 @@
         ];
       case 'zh-hk':
       case 'zh-tw':
+        document.title = '交易者而生，極致體驗的交易App';
         return [
           '源於效率,不止交易',
           '為交易者而生',
@@ -56,6 +58,7 @@
           '下載Bybit App'
         ];
       case 'ja-jp':
+        document.title = '取引は一つのアプリで完結';
         return [
           'トレーダーのために',
           '構築されたアプリ',
@@ -80,6 +83,7 @@
           'Bybitアプリをダウンロード'
         ];
       case 'ko-kr':
+        document.title = '트레이더를 위한 완벽한 App';
         return [
           '안전하고 효율적인 트레이딩',
           '트레이더를 위한 플랫폼',
@@ -104,6 +108,7 @@
           'Bybit App 다운로드'
         ];
       case 'ru-ru':
+        document.title = 'Лучшее торговое приложение';
         return [
           'Криптовалютная биржа',
           'от трейдеров для трейдеров',
@@ -128,6 +133,7 @@
           'Скачать приложение'
         ];
       default:
+        document.title = 'The Perfect App for Traders';
         return [
           'Your Trusted Crypto Trading Platform',
           'Designed for Traders by Traders',

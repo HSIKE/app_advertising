@@ -6,5 +6,11 @@
 *.copy.*
 *.temp.*
 
+# node_modules
+node_modules
+
 # build
 build
+
+# package-lock.json
+package-lock.json

@@ -150,6 +150,7 @@ body {
   right: 0;
   position: absolute;
   z-index: 2;
+  transform: translateY(3.26rem);
   transform-origin: center 0;
 }
 .logo img.animate {

@@ -106,12 +106,13 @@ html, body, p, img, div, a {
 }
 
 html {
+  width: 100%;
   font-size: 10vw;
 }
 
 body {
   background: #101014;
-  width: 100vw;
+  width: 100%;
 }
 
 .page {

@@ -135,8 +135,8 @@
       default:
         document.title = 'The Perfect App for Traders';
         return [
-          'Your Trusted Crypto Trading Platform',
-          'Designed for Traders by Traders',
+          'Your Trusted Crypto\nTrading Platform',
+          'Designed for Traders\nby Traders',
           store,
           isIOS ? 'iOS Beta' : 'Desktop Download',
           'Focused on\nCryptocurrency Derivatives',

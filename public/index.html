@@ -6,19 +6,7 @@
   <title></title>
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="./js/i18n.js"></script>
-  <script type="text/javascript">
-    (function() {
-      /* Set font-size if window's size changes */
-      function resetRem() {
-        var html = document.documentElement;
-        var width = document.documentElement.clientWidth || document.body.clientWidth || window.innerWidth;
-        html.style.fontSize = width / 10 + "px";
-        window.rem = width / 10;
-      }
-      window.addEventListener("DOMContentLoaded", resetRem);
-      window.addEventListener("resize", resetRem);
-    })();
-  </script>
+  <script type="text/javascript" src="./js/remManager.js"></script>
 </head>
 <body>
   <div class="page home">

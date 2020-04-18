@@ -28,12 +28,12 @@
     const leftSize = slideLeft.getBoundingClientRect();
     const rightSize = slideRight.getBoundingClientRect();
     if (leftSize.left > -16 * window.rem) {
-      slideLeft.style.left = `${leftSize.left - 1}px`;
+      slideLeft.style.left = `${(leftSize.left - 1) / window.rem}rem`;
     } else {
       slideLeft.style.left = '0';
     }
     if (rightSize.left < -5.215 * window.rem) {
-      slideRight.style.left = `${rightSize.left + 1}px`
+      slideRight.style.left = `${(rightSize.left + 1) / window.rem}rem`
     } else {
       slideRight.style.left = '-21.22rem';
     }

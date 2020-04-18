@@ -4,13 +4,16 @@ const path = require('path');
 const url = require('url');
 const zlib = require('zlib');
 
+const envs = process.argv.slice(2);
+const root = path.join(__dirname, envs[0] || 'public')
+
 http.createServer((req, res) => {
   const { pathname } = url.parse(req.url);
   const acceptEncoding = req.headers['accept-encoding'] || '';
   let raw;
 
   try {
-    raw = fs.createReadStream(path.resolve(__dirname, 'public', pathname.replace(/^\//, '') || 'index.html'));
+    raw = fs.createReadStream(path.resolve(root, pathname.replace(/^\//, '') || 'index.html'));
 
     raw.on('error', (err) => {
       console.log(err);

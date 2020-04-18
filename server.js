@@ -5,12 +5,15 @@ const url = require('url');
 const zlib = require('zlib');
 
 const envs = process.argv.slice(2);
-const root = path.join(__dirname, envs[0] || 'public')
+const root = path.join(__dirname, envs[0] || 'public');
 
 http.createServer((req, res) => {
   const { pathname } = url.parse(req.url);
   const acceptEncoding = req.headers['accept-encoding'] || '';
   let raw;
+  if (pathname === '/') {
+    console.log(req.headers['accept-language']);
+  }
 
   try {
     raw = fs.createReadStream(path.resolve(root, pathname.replace(/^\//, '') || 'index.html'));

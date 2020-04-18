@@ -53,8 +53,8 @@
     const homeHeight = home.offsetHeight;
     const zoomFactor = Math.min(Math.max(scrolled / homeHeight, 0), 1);
 
-    const logoTranslateY = (1 + 1.44 * zoomFactor) * 3.96;
-    const sloganTranslateY = (1 + 0.12 * zoomFactor) * 9.81;
+    const logoTranslateY = (1 + 1.96 * zoomFactor) * 3.26;
+    const sloganTranslateY = (1 + 0.404 * zoomFactor) * 7.79;
 
     if (zoomFactor >= 0 && zoomFactor < 1) {
       const logoZoom = 1 - 0.6 * zoomFactor;

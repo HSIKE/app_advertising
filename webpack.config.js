@@ -1,26 +1,12 @@
 const path = require('path');
-const fs = require('fs');
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const ExtractTextPlugin = require("mini-css-extract-plugin");
-// const purifyCssWebpack = require("purifycss-webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const BabelMinifyPlugin = require('babel-minify-webpack-plugin');
-// const TerserPlugin = require('terser-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 const root = path.join(__dirname, 'public');
 const outputRoot = path.join(__dirname, 'build');
 
-// const jsFiles = fs.readdirSync(path.join(root, 'js'));
-//
-// const entry = jsFiles.reduce((prev, name) => ({
-//   ...prev,
-//   [name]: path.join(root, 'js', name),
-// }), {});
 const indexHtml = path.join(root, 'index.html');
 
 module.exports = {
@@ -125,30 +111,11 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ['build'],
     }),
-    // new ExtractTextPlugin({
-    //   filename: '[name].css',
-    //   publicPath: './'
-    // }),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true,
       }
     }),
-    // new BabelMinifyPlugin({
-    //   presets: ['minify']
-    // }, {
-    //   test: /\.js$/,
-    //   comments: false,
-    // }),
-    // new UglifyJSPlugin({
-    //   uglifyOptions: {
-    //     compress: {
-    //       warnings: false,
-    //       drop_debugger: false,
-    //       drop_console: true
-    //     }
-    //   }
-    // }),
     new HtmlWebpackPlugin({
       template: path.join(root, 'index.html'),
       filename: 'index.html',

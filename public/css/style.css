@@ -313,7 +313,7 @@ body {
 .lazy {
   opacity: 0;
 }
-.lazy.show {
+.lazy.animate {
   animation: btt 0.8s 1;
   animation-fill-mode: forwards;
 }

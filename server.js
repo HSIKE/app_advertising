@@ -11,9 +11,6 @@ http.createServer((req, res) => {
   const { pathname } = url.parse(req.url);
   const acceptEncoding = req.headers['accept-encoding'] || '';
   let raw;
-  if (pathname === '/') {
-    console.log(req.headers['accept-language']);
-  }
 
   try {
     raw = fs.createReadStream(path.resolve(root, pathname.replace(/^\//, '') || 'index.html'));

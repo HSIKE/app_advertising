@@ -5,7 +5,7 @@
     const lazyImg = document.querySelectorAll('.img.lazyload');
     lazyImg.forEach((ele) => {
       const dtt = ele.getBoundingClientRect().top;
-      if ((dtt <= vh + 100) && !ele.src) {
+      if ((dtt <= 1.4 * vh) && !ele.src) {
         ele.src = ele.dataset.src;
         ele.style.opacity = '1';
       }
@@ -15,7 +15,7 @@
     lazyAnimate.forEach((ele) => {
       const dtt = ele.getBoundingClientRect().top;
       if (dtt <= vh - 40) {
-        ele.classList.add('show')
+        ele.classList.add('animate')
       }
     });
 

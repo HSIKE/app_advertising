@@ -208,7 +208,7 @@ body {
   animation-fill-mode: forwards;
 }
 .guide .img {
-  animation: bounce 2s 2s infinite;
+  animation: bounce 2s infinite 2s;
 }
 
 .btns::after {

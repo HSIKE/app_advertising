@@ -29,7 +29,8 @@
         '零成本开仓',
         '人性化体验',
         '高级交易功能',
-        '下载Bybit App'
+        '下载Bybit App',
+        '推荐',
       ];
     }
     if (['zh-tw', 'zh-hk'].includes(lang)) {
@@ -55,7 +56,8 @@
         '零成本開倉',
         '人性化體驗',
         '高級交易功能',
-        '下載Bybit App'
+        '下載Bybit App',
+        '推薦',
       ];
     }
     if (['ja-jp', 'ja'].includes(lang)) {
@@ -69,10 +71,10 @@
         '選ばれる理由',
         'リアルタイム価格通知',
         '外出先でも価格通知を受信可能',
-        '利食/損切注文が設定可能',
+        '利食/損切注文の設定',
         'ポジション決済機能で取引がより簡単',
         '損益率シェア',
-        'リアルタイム収益、歴史収益など色々シェアできる',
+        'リアルタイム収益や歴史収益がシェアできる',
         '二重価格メカニズム',
         '市場操作による強制決済からトレーダーを守る',
         '今すぐダウンロード',
@@ -81,7 +83,8 @@
         '参入コストなし',
         '使いやすさ',
         '高性能な取引機能',
-        'Bybitアプリをダウンロード'
+        'ダウンロード',
+        'オススメ',
       ];
     }
     if (['ko-kr', 'ko'].includes(lang)) {
@@ -95,7 +98,7 @@
         '주요 기능',
         '실시간 가격 알림',
         '시세 변화를 놓치지 않고 최적의 시기에 투자 가능',
-        '간편한 목표가/손절가 설정',
+        '간편한 TP/SL 설정',
         '다양한 청산 전략을 더욱 간편하게 사용 가능',
         '실시간 수익 현황 확인',
         '실시간 수익과 거래 내역 정보 확인 및 공유 가능',
@@ -105,16 +108,17 @@
         '우수한 매칭엔진',
         '콜드월렛 시스템',
         '포지션 오픈 시제로 수수료',
-        '24시간한국어 고객센터',
+        '24시간 한국어\n고객센터',
         '고급 거래 기능',
-        'Bybit App 다운로드'
+        'Bybit App 다운로드',
+        '추천',
       ];
     }
     if (['ru-ru', 'ru'].includes(lang)) {
       document.title = 'Лучшее торговое приложение';
       return [
         'Криптовалютная биржа',
-        'от трейдеров для трейдеров',
+        'сделано трейдерами',
         store,
         isIOS ? 'iOS бета-версия' : 'Загрузка на ПК',
         'С фокусом на криптодеривативы',
@@ -133,7 +137,8 @@
         'Позиции без затрат',
         'Для людей',
         'Продвинутые функции',
-        'Скачать приложение'
+        'Скачать приложение',
+        'Рекомендуем',
       ];
     }
     document.title = 'The Perfect App for Traders';
@@ -141,24 +146,25 @@
       'Your Trusted Crypto\nTrading Platform',
       'Designed for Traders\nby Traders',
       store,
-      isIOS ? 'iOS Beta' : 'Desktop Download',
+      isIOS ? 'iOS Beta' : 'Direct Download',
       'Focused on\nCryptocurrency Derivatives',
       'Advantages',
       'Price Alert Notifications',
       'Never miss any market movements',
       'One-Click Take Profit & Stop Loss',
       'Just one click to execute TP & SL orders right from the order window ',
-      'Sharing Your PnL',
+      'Sharing Your P&L',
       'Share real time trades with your friends',
       'No Overloads ',
-      '99.99% Platform availability & no down time',
+      '99.99% Platform Availability & No Downtimes',
       'Get Our App & Trade Crypto On The Go',
       'Advanced Matching Engine',
       'Cold Wallet System',
       'Zero-cost Open Positions',
       'We Listen, Care, Improve',
       'Advanced Trading Functions',
-      'Download Bybit App'
+      'Download Bybit App',
+      'Recommendation'
     ];
   }
   window.i18n = getLocaleText(navigator.language);

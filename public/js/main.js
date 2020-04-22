@@ -20,6 +20,9 @@
     document.querySelectorAll('.btn').forEach((el) => {
       el.classList.add('animate');
     });
+    document.querySelectorAll('.rec').forEach((el) => {
+      el.classList.add('animate')
+    })
   });
 
   setInterval(() => {
@@ -73,7 +76,7 @@
       btns.style.cssText = `
         opacity:${btnsOpacity};
         position:fixed;
-        visibility:${btnsOpacity > 0 ? 'visible' : 'hidden'}; 
+        visibility:${btnsOpacity > 0 ? 'visible' : 'hidden'};
         transform:scale(${btnsZoom});
       `;
       guide.style.cssText = `

@@ -34,6 +34,16 @@
     transform: scale(1);
   }
 }
+@keyframes rec-animation {
+  from {
+    transform: translate(0, -70%) scale(0.3);
+    visibility: visible;
+  }
+  to {
+    transform: translate(0, -70%) scale(1);
+    visibility: visible;
+  }
+}
 @keyframes guide {
   from {
     bottom: -0.29rem;
@@ -201,15 +211,19 @@ body {
   animation: bounce 2s 2s infinite;
 }
 
-.btns {
-  z-index: 9;
+.btns::after {
+  content: '';
+  display: block;
+  clear: both;
+  width: 0;
+  height: 0;
 }
 .home .btns {
   left: 0.483rem;
   right: 0.483rem;
-  overflow: hidden;
   bottom: 1.7rem;
   position: absolute;
+  z-index: 9;
 }
 .btns .btn {
   text-decoration: none;
@@ -223,6 +237,7 @@ body {
   text-align: center;
   opacity: 0;
   color: #101014;
+  position: relative;
 }
 .btn.animate {
   animation: btn-animation 1.5s 1 0.5s;
@@ -238,6 +253,25 @@ body {
   line-height: 1;
   position: relative;
   padding-left: 0.845rem;
+}
+.btn .rec {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  top: 0;
+  right: -0.242rem;
+  padding: 0.121rem;
+  font-size: 0.217rem;
+  line-height: 1;
+  /*transform: translate(0, -50%);*/
+  /*transform-origin: 0 bottom;*/
+  color: #000;
+  background:linear-gradient(180deg,rgba(254,228,177,1) 0%,rgba(255,177,26,1) 100%);
+  border-radius: 0.242rem 0.242rem 0.242rem 0.048rem;
+}
+.btn .rec.animate {
+  animation: rec-animation 0.3s 1 2s;
+  animation-fill-mode: forwards;
 }
 .img.platform {
   position: absolute;
@@ -476,6 +510,7 @@ body {
   color: #FFF;
   margin-top: 0.362rem;
   line-height: 0.483rem;
+  white-space: pre-wrap;
 }
 .page.download {
   padding-top: 1.932rem;
@@ -483,7 +518,6 @@ body {
 }
 .download .btns {
   margin: 2.657rem 0.483rem 0;
-  overflow: hidden;
 }
 .download .title {
   color: #FFB11A;
@@ -492,7 +526,7 @@ body {
   width: 4.251rem;
   height: 8.49rem;
   margin-top: 3.14rem;
-  margin-left: 1.353rem;
+  margin-left: 1.8rem;
   position: relative;
 }
 .bybit .img.rotate {

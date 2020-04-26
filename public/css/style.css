@@ -540,7 +540,7 @@ body {
   visibility: hidden;
 }
 .bybit .img.rotate.animate {
-  animation: rotate 1s 1;
+  animation: rotate 0.5s 1;
   animation-fill-mode: forwards;
   visibility: visible;
 }

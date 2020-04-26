@@ -44,7 +44,7 @@
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     const totalHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
 
-    if ((rotate.top <= 0.2 * vh) || (scrollTop + vh) === totalHeight) {
+    if ((rotate.top <= 0.35 * vh) || (scrollTop + vh) === totalHeight) {
       document.querySelector('.bybit .img.rotate').classList.add('animate')
     }
   }

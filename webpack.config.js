@@ -119,7 +119,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(root, 'index.html'),
       filename: 'index.html',
-      inject: false,
+      inject: true,
       hash: false,
       minify: true,
       favicon: path.join(root, 'favicon.ico'),

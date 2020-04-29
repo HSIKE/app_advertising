@@ -15,3 +15,5 @@ build
 # lock files
 package-lock.json
 yarn.lock
+
+*.out

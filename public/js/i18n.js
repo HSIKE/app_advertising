@@ -138,7 +138,7 @@
         'Для людей',
         'Продвинутые функции',
         'Скачать приложение',
-        'Рекомендуем',
+        'Премиум',
       ];
     }
     document.title = 'The Perfect App for Traders';
@@ -164,7 +164,7 @@
       'We Listen, Care, Improve',
       'Advanced Trading Functions',
       'Download Bybit App',
-      'Recommendation'
+      'Premier'
     ];
   }
   window.i18n = getLocaleText(navigator.language);
